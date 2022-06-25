@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const usecounter = () => {
+const useCounter = () => {
   const [counter, setCounter] = useState(0);
 
   //fetching data, directly updating the DOM, and timers.
@@ -15,6 +15,8 @@ const usecounter = () => {
       clearInterval(interval);
     };
   }, []);
+
+  return counter;
 };
 
-export default usecounter;
+export default useCounter;
